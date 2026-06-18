@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prakiraan Cuaca Laut Maritim - Mancing Mania</title>
+  <meta name="description" content="Informasi detail cuaca laut maritim untuk hari ini, besok, dan lusa meliputi tinggi gelombang, kecepatan angin, arus laut, dan suhu udara.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="/" class="logo" id="site-logo">
+        <span class="logo-icon"><i class="fa-solid fa-anchor"></i></span>
+        <span id="logo-text">MANCING<span>MANIA</span></span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="/#about"><i class="fa-solid fa-circle-info"></i> Tentang Kami</a></li>
+        <li><a href="#" class="active"><i class="fa-solid fa-cloud-showers-water"></i> Cuaca Laut</a></li>
+        <li><a href="/#gallery"><i class="fa-solid fa-images"></i> Galeri</a></li>
+        <li><a href="/#status-check"><i class="fa-solid fa-magnifying-glass"></i> Cek Status</a></li>
+      </ul>
+      <a href="/#booking" class="nav-btn"><i class="fa-solid fa-calendar-check"></i> Sewa Sekarang</a>
+    </div>
+  </header>
+
+  <!-- WEATHER PAGE HERO -->
+  <section class="weather-page-hero">
+    <div class="container">
+      <h1 class="section-title">Prakiraan Cuaca Laut Maritim</h1>
+      <p class="section-subtitle">Data real-time tinggi gelombang, angin, dan arus laut di titik koordinat operasional perahu mancing kami.</p>
+      
+      <div id="coordinate-info" style="display: inline-block; background: var(--bg-card); padding: 8px 18px; border-radius: var(--radius-full); font-size: 0.9rem; border: 1px solid var(--bg-card-border); color: var(--text-muted); margin-bottom: 20px;">
+        <i class="fa-solid fa-location-dot" style="color: var(--secondary); margin-right: 6px;"></i> Koordinat: Memuat...
+      </div>
+    </div>
+  </section>
+
+  <!-- WEATHER CONTENT -->
+  <section style="padding: 0 0 100px 0;">
+    <div class="container">
+      
+      <!-- Date Tabs -->
+      <div class="weather-tabs" id="weather-date-tabs">
+        <button class="weather-tab-btn active" data-day="0">Hari Ini</button>
+        <button class="weather-tab-btn" data-day="1">Besok</button>
+        <button class="weather-tab-btn" data-day="2">Lusa</button>
+      </div>
+
+      <!-- Weather Summary Grid -->
+      <div class="weather-grid-details" id="weather-summary-grid">
+        <div class="weather-detail-card">
+          <div class="icon"><i class="fa-solid fa-water"></i></div>
+          <h4>Gelombang Maks</h4>
+          <p id="summary-wave">-</p>
+          <span id="summary-wave-status">-</span>
+        </div>
+        <div class="weather-detail-card">
+          <div class="icon"><i class="fa-solid fa-wind"></i></div>
+          <h4>Kecepatan Angin Maks</h4>
+          <p id="summary-wind">-</p>
+          <span id="summary-wind-dir">-</span>
+        </div>
+        <div class="weather-detail-card">
+          <div class="icon"><i class="fa-solid fa-gauge-simple-high"></i></div>
+          <h4>Arus Laut Dominan</h4>
+          <p id="summary-current">-</p>
+          <span id="summary-current-dir">-</span>
+        </div>
+        <div class="weather-detail-card">
+          <div class="icon"><i class="fa-solid fa-cloud-sun-rain"></i></div>
+          <h4>Suhu & Kondisi</h4>
+          <p id="summary-temp">-</p>
+          <span id="summary-condition">-</span>
+        </div>
+      </div>
+
+      <!-- Hourly Forecast Section -->
+      <div class="hourly-forecast-section">
+        <h3><i class="fa-solid fa-clock-rotate-left"></i> Rincian Per Jam (Interval 3 Jam)</h3>
+        <table class="hourly-table">
+          <thead>
+            <tr>
+              <th>Jam</th>
+              <th>Cuaca</th>
+              <th>Suhu</th>
+              <th>Tinggi Gelombang</th>
+              <th>Arah & Periode Gelombang</th>
+              <th>Kecepatan & Arah Angin</th>
+              <th>Kecepatan & Arah Arus</th>
+            </tr>
+          </thead>
+          <tbody id="hourly-tbody">
+            <tr>
+              <td colspan="7" style="text-align: center; padding: 40px; color: var(--text-muted);">
+                <i class="fa-solid fa-circle-notch fa-spin" style="font-size: 2rem; margin-bottom: 12px; display: block; color: var(--primary);"></i>
+                Sedang memuat rincian cuaca maritim...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- SAFETY RECOMMENDATION -->
+      <div class="glass-card" style="margin-top: 40px; border-left: 5px solid var(--secondary); background: hsla(var(--secondary-hue), 100%, 50%, 0.03);">
+        <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+          <i class="fa-solid fa-circle-exclamation" style="color: var(--secondary);"></i> Panduan Keselamatan Laut
+        </h4>
+        <ul style="color: var(--text-muted); list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.95rem;">
+          <li>🟢 **Tinggi Gelombang < 0.5m (Tenang)**: Kondisi sangat aman untuk semua perahu kecil, perahu pancing, dan kapal rekreasi.</li>
+          <li>🟡 **Tinggi Gelombang 0.5m - 1.25m (Sedikit Kasar)**: Relatif aman untuk kapal mancing besar, namun harap waspada bagi perahu nelayan tradisional kecil.</li>
+          <li>🟠 **Tinggi Gelombang 1.25m - 2.5m (Kasar)**: Waspada! Disarankan untuk menunda pelayaran bagi kapal rekreasi atau kapal mancing skala kecil.</li>
+          <li>🔴 **Tinggi Gelombang > 2.5m (Sangat Kasar/Bahaya)**: Dilarang Melaut! Kondisi cuaca badai atau gelombang tinggi ekstrim, sangat berbahaya bagi keselamatan jiwa.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <a href="/" class="footer-logo" id="site-footer-logo">
+        <i class="fa-solid fa-anchor"></i> <span id="footer-logo-text">MANCING<span>MANIA</span></span>
+      </a>
+      <p>&copy; 2026 Mancing Mania. All Rights Reserved.</p>
+      <p style="font-size: 0.85rem; color: #555;">Data cuaca bersumber dari Open-Meteo Marine API. Update otomatis berdasarkan koordinat admin.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Sticky Booking Button for Mobile -->
+  <a href="/#booking" class="mobile-sticky-btn">
+    <i class="fa-solid fa-calendar-check"></i> Pesan Perahu Sekarang
+  </a>
+
+  <!-- JAVASCRIPT -->
+  <script src="/js/weather.js"></script>
+</body>
+</html>

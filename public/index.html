@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mancing Mania - Sewa Perahu Mancing Profesional & Terpercaya</title>
+  <meta name="description" content="Sewa perahu mancing terbaik dengan fasilitas lengkap, kapten berpengalaman, rincian cuaca laut natgeo maritim real-time, dan sistem notifikasi WhatsApp instan.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="logo" id="site-logo">
+        <span class="logo-icon"><i class="fa-solid fa-anchor"></i></span>
+        <span id="logo-text">MANCING<span>MANIA</span></span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#about"><i class="fa-solid fa-circle-info"></i> Tentang Kami</a></li>
+        <li><a href="/cuaca.html"><i class="fa-solid fa-cloud-showers-water"></i> Cuaca Laut</a></li>
+        <li><a href="#gallery"><i class="fa-solid fa-images"></i> Galeri</a></li>
+        <li><a href="#status-check"><i class="fa-solid fa-magnifying-glass"></i> Cek Status</a></li>
+      </ul>
+      <a href="#booking" class="nav-btn"><i class="fa-solid fa-calendar-check"></i> Sewa Sekarang</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      
+      <div class="hero-content">
+        <h1 id="hero-title">Sewa Perahu Mancing Terbaik & Terpercaya</h1>
+        <p id="hero-subtitle">Nikmati sensasi petualangan mancing di laut lepas dengan kapal modern, kapten berpengalaman, dan sistem pelacakan cuaca maritim real-time.</p>
+        
+        <!-- Live Weather Widget -->
+        <div class="weather-widget">
+          <div class="weather-header">
+            <div class="weather-title">
+              <i class="fa-solid fa-compass-drafting fa-spin" style="color: var(--secondary)"></i>
+              <span>Live Cuaca Laut Maritim</span>
+            </div>
+            <span class="weather-status-text" id="widget-condition">Memuat cuaca...</span>
+          </div>
+          <div class="weather-grid">
+            <div class="weather-item">
+              <span class="weather-icon"><i class="fa-solid fa-water" style="color: #00bcd4;"></i></span>
+              <span class="weather-val" id="widget-wave">-</span>
+              <span class="weather-label">Tinggi Gelombang</span>
+            </div>
+            <div class="weather-item">
+              <span class="weather-icon"><i class="fa-solid fa-wind" style="color: #8bc34a;"></i></span>
+              <span class="weather-val" id="widget-wind">-</span>
+              <span class="weather-label">Kecepatan Angin</span>
+            </div>
+            <div class="weather-item">
+              <span class="weather-icon"><i class="fa-solid fa-temperature-half" style="color: #ff9800;"></i></span>
+              <span class="weather-val" id="widget-temp">-</span>
+              <span class="weather-label">Suhu Udara</span>
+            </div>
+          </div>
+          <div class="weather-link">
+            <a href="/cuaca.html">Lihat Detail Cuaca Laut Hari Ini, Besok & Lusa <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Booking Form -->
+      <div class="booking-card glass-card" id="booking">
+        <h3><i class="fa-solid fa-ship" style="color: var(--secondary);"></i> Booking Sewa Perahu</h3>
+        <form id="booking-form">
+          <div class="form-group">
+            <label for="input-name">Nama Lengkap</label>
+            <input type="text" id="input-name" placeholder="Masukkan nama Anda" required>
+          </div>
+          <div class="form-group">
+            <label for="input-phone">Nomor WhatsApp / HP</label>
+            <input type="tel" id="input-phone" placeholder="Contoh: 08123456789" required>
+          </div>
+          <div class="form-group">
+            <label for="input-people">Jumlah Anggota Pemancing</label>
+            <input type="number" id="input-people" min="1" value="1" required>
+          </div>
+          <div class="form-group">
+            <label for="input-time">Jam Keberangkatan</label>
+            <select id="input-time" required>
+              <!-- Loaded dynamically -->
+              <option value="">Memuat jadwal...</option>
+            </select>
+          </div>
+
+          <div class="price-summary">
+            <span>Estimasi Total Bayar:</span>
+            <strong id="display-total-price">Rp 0</strong>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <i class="fa-solid fa-circle-check"></i> Pesan Perahu Sekarang
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" style="background-color: hsla(222, 47%, 9%, 0.5);">
+    <div class="container">
+      <h2 class="section-title">Kenapa Memilih Layanan Kami?</h2>
+      <p class="section-subtitle">Kami menyediakan kapal mancing terbaik dengan standar keselamatan internasional untuk memberikan pengalaman mancing tak terlupakan.</p>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3>Keamanan Utama</h3>
+          <p>Kapal kami dilengkapi GPS plotter, depth finder (fish finder), pelampung keselamatan untuk semua penumpang, dan alat komunikasi laut darurat.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+          <h3>Kapten Berpengalaman</h3>
+          <p>Kapten dan kru kapal kami adalah pelaut lokal berlisensi yang sangat memahami titik-titik (spot) mancing ikan monster di laut terdalam.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-circle-info"></i>
+          </div>
+          <h3>Notifikasi Instan</h3>
+          <p>Dapatkan update konfirmasi booking sewa perahu secara instan yang langsung dikirimkan ke nomor WhatsApp Anda dan admin.</p>
+        </div>
+      </div>
+
+      <div class="about-promo">
+        <div>
+          <img src="/images/hero-bg.png" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border: 1px solid var(--bg-card-border);" alt="Mancing Mania Boat">
+        </div>
+        <div>
+          <h3 style="font-size: 2rem; margin-bottom: 20px; color: #fff;">Petualangan Laut Menanti Anda</h3>
+          <p id="about-us-text" style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 24px;">Kami berkomitmen menyediakan perahu mancing terbaik yang dirawat berkala untuk kepuasan hobi memancing Anda. Baik memancing ikan hias, karang, maupun ikan predator besar seperti Tuna dan Marlin.</p>
+          <a href="#booking" class="btn btn-secondary"><i class="fa-solid fa-calendar-plus"></i> Mulai Booking Trip</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery">
+    <div class="container">
+      <h2 class="section-title">Dokumentasi Galeri & Trip</h2>
+      <p class="section-subtitle">Beberapa tangkapan ikan monster dan dokumentasi perjalanan seru para pemancing mania di kapal kami.</p>
+      
+      <div class="gallery-grid" id="gallery-container">
+        <!-- Loaded dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- STATUS CHECK SECTION -->
+  <section id="status-check" class="status-checker">
+    <div class="container">
+      <div class="checker-card glass-card">
+        <h2><i class="fa-solid fa-receipt" style="color: var(--secondary)"></i> Cek Status Pesanan Anda</h2>
+        <p style="color: var(--text-muted); margin-top: 8px;">Masukkan Kode Booking Anda (misal: MM-1234) atau Nomor WhatsApp Anda untuk melihat status persetujuan sewa perahu.</p>
+        
+        <div class="search-bar">
+          <input type="text" id="search-input" placeholder="Masukkan Kode Booking / No HP Anda...">
+          <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i> Cari Status</button>
+        </div>
+
+        <div class="checker-results" id="search-results" style="display: none;">
+          <!-- Loaded dynamically -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <a href="#" class="footer-logo" id="site-footer-logo">
+        <i class="fa-solid fa-anchor"></i> <span id="footer-logo-text">MANCING<span>MANIA</span></span>
+      </a>
+      <p>&copy; 2026 Mancing Mania. All Rights Reserved.</p>
+      <p style="font-size: 0.85rem; color: #555;">Ditenagai oleh Node.js, SQLite & Baileys WhatsApp Gateway. Desain Premium & Responsif.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Sticky Booking Button for Mobile -->
+  <a href="#booking" class="mobile-sticky-btn">
+    <i class="fa-solid fa-calendar-check"></i> Pesan Perahu Sekarang
+  </a>
+
+  <div id="toast-container"></div>
+
+  <!-- JAVASCRIPT -->
+  <script src="/js/app.js"></script>
+</body>
+</html>

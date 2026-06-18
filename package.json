@@ -1,0 +1,36 @@
+{
+  "name": "mancing-mania-booking",
+  "version": "1.0.0",
+  "description": "Boat Rental Booking Website for Mancing Mania with Weather Updates and WhatsApp Notifications",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "boat",
+    "rental",
+    "booking",
+    "mancing-mania",
+    "weather",
+    "whatsapp",
+    "baileys"
+  ],
+  "author": "Antigravity",
+  "license": "ISC",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.9",
+    "axios": "^1.7.9",
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.8.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "multer": "^1.4.5-lts.1",
+    "pino": "^9.6.0",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
